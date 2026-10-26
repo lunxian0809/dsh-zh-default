@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+
+# logs & scratch
+*.log
+*.tmp
+_tmp/
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

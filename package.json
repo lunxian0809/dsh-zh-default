@@ -1,0 +1,51 @@
+{
+  "name": "dsh-zh-default",
+  "version": "0.1.0",
+  "description": "让 DeepSeek Harness 的思考过程（reasoning）与最终回答默认使用简体中文：只注册一段系统提示词 section，不改工具、不改 UI。",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "MIT",
+  "author": "lunxian0809",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunxian0809/dsh-zh-default.git"
+  },
+  "homepage": "https://github.com/lunxian0809/dsh-zh-default#readme",
+  "bugs": {
+    "url": "https://github.com/lunxian0809/dsh-zh-default/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "chinese",
+    "language"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.0-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "check": "node --check lib/index.js",
+    "test": "node scripts/selftest.mjs"
+  }
+}

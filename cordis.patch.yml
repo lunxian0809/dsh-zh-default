@@ -1,0 +1,6 @@
+# dsh-zh-default bundle layer: 安装本包时自动生效（package.json 声明 dsh.bundle.patch），
+# 无需手改 profile 的 cordis.patch.yml。后续 profile / --patch 层可按 id 覆盖本行配置。
+# id 固定为 zh-default。
+- insert:
+    - id: zh-default
+      name: dsh-zh-default
